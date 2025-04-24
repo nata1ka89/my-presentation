@@ -1,40 +1,202 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background-image="/assets/GraphQL_vs._REST.jpg">
+				<h2> vs </h2>
+			</section>
+			<section>
+				<section>
+					<h3>What are APIs?</h3>
+				</section>
+				<section>
+					Application programming interfaces, or APIs, are sets of rules for software systems to communicate with
+					each other and share data.
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>What is REST?</h3>
+				</section>
+				<section>REST (REpresentational State Transfer) is a software design pattern for APIs on the web.
+				</section>
+			</section>
+			<section>
+				<h4>Here are the main features of REST APIs: </h4>
+				<ul>
+					<li>Endpoints are explicit.</li>
+					<li>Uses HTTP methods like GET, POST, PUT, DELETE.</li>
+					<li>REST separates the client and server concerns.</li>
+					<li>REST responses are cacheable.</li>
+					<img data-src="/assets/rabota.png">
+				</ul>
+			</section>
+			<section>
+				<img data-src="/assets/rest.jpg">
+				<p class="fragment" style="color: aqua;">https://api.github.com/users/{username}</p>
+				<p class="fragment" style="color: aqua;"> https://api.github.com/repos/{owner}/{repo}</p>
+			</section>
+			<section>
+				<h4>Benefits of REST APIs </h4>
+				<section>
+					<div style="display: flex;justify-content: space-around;">
+						<ul>
+							<li>It’s all in the URL</li>
+							<li>Standards-based</li>
+							<li>Caching</li>
+							<li>Language-agnostic</li>
+							<li>Strong community</li>
+						</ul>
+						<img data-src="/assets/tick.png">
+					</div>
+				</section>
+			</section>
+			<section>
+				<h4>Disadvantages of REST APIs </h4>
+				<section>
+					<div style="display: flex;justify-content: space-around;">
+						<img data-src="/assets/cross.png">
+						<ul style="justify-content: center;
+							display: flex	;
+							flex-direction: column;">
+							<li>Over-fetching or under-fetching data</li>
+							<li>Versioning</li>
+							<li>Limited real-time capability</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>What is GraphQL? </h3>
+				</section>
+				<section>
+					GraphQL is a JSON-like language that was invented in 2012 by engineers at Facebook, and made open source in
+					2015.
+					GraphQL is a type of API that works via its own Query Language.
+				</section>
+			</section>
+			<section style="font-size: 30px;">
+				<img width="700vw" data-src="/assets/graph.jpg">
+				<ol>
+					<li class="fragment">With GraphQL, the request is longer but more explicit.</li>
+					<li class="fragment">The important information about the request is in the query, rather than in the URL, like
+						in
+						REST.</li>
+					<li class="fragment">The URL stays the same, and the endpoint is different. </li>
+				</ol>
+			</section>
+			<section>
+				<h4>Benefits of GraphQL APIs</h4>
+				<section>
+					<ul>
+						<li>Client-specified data requirements</li>
+						<li>Single endpoint</li>
+						<li>Single request</li>
+						<li>Strong typing</li>
+						<li>Real-time data with subscriptions</li>
+						<li>Evolution</li>
+					</ul>
+					<img data-src=" /assets/tick.png">
+				</section>
+			</section>
+			<section>
+				<h4>Disadvantages of GraphQL APIs</h4>
+				<section>
+					<div style="display: flex;justify-content: space-around;">
+						<img data-src="/assets/cross.png">
+						<ul>
+							<li>Complexity</li>
+							<li>Caching</li>
+							<li>Learning curve</li>
+							<li>Potential for inefficient queries</li>
+							<li>Support</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+			<section>
+				<table>
+					<thead>
+						<tr>
+							<th>Aspect</th>
+							<th>REST</th>
+							<th>GraphQL</th>
+						</tr>
+					</thead>
+					<tbody style="font-size: 30px;">
+						<tr>
+							<td>Data fetching</td>
+							<td>Returns entire datasets from specific endpoints</td>
+							<td>Returns only the data requested from the client</td>
+						</tr>
+						<tr>
+							<td>Endpoints</td>
+							<td>Multiple endpoints for different resources</td>
+							<td>Single endpoint for all data requests</td>
+						</tr>
+						<tr>
+							<td>Caching</td>
+							<td>Leverages HTTP caching natively</td>
+							<td>More challenging, requires custom caching solutions</td>
+						</tr>
+						<tr>
+							<td>Real-time support</td>
+							<td>Limited, often requires WebSockets</td>
+							<td>Supports real-time updates with subscriptions</td>
+						</tr>
+						<tr>
+							<td>Complexity</td>
+							<td>Typically simpler to set up</td>
+							<td>Can be more complex to implement and manage</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<section>
+				<div style="display: flex; justify-content: center; gap: 520px;">
+					<p>REST</p>
+					<p>GraphQL</p>
+				</div>
+				<div style="display: flex; justify-content: center; gap: 40px">
+					<img width="600vw" data-src="/assets/rest-diagram.jpg">
+					<img width="600vw" data-src="/assets/graphQL-diagram.jpg">
+				</div>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
