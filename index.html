@@ -18,7 +18,7 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section data-background-image="/assets/GraphQL_vs._REST.jpg">
+			<section data-background-image="assets/GraphQL_vs._REST.jpg">
 				<h2> vs </h2>
 			</section>
 			<section>
@@ -44,11 +44,11 @@
 					<li>Uses HTTP methods like GET, POST, PUT, DELETE.</li>
 					<li>REST separates the client and server concerns.</li>
 					<li>REST responses are cacheable.</li>
-					<img data-src="/assets/rabota.png">
+					<img data-src="assets/rabota.png">
 				</ul>
 			</section>
 			<section>
-				<img data-src="/assets/rest.jpg">
+				<img data-src="assets/rest.jpg">
 				<p class="fragment" style="color: aqua;">https://api.github.com/users/{username}</p>
 				<p class="fragment" style="color: aqua;"> https://api.github.com/repos/{owner}/{repo}</p>
 			</section>
@@ -61,9 +61,8 @@
 							<li>Standards-based</li>
 							<li>Caching</li>
 							<li>Language-agnostic</li>
-							<li>Strong community</li>
 						</ul>
-						<img data-src="/assets/tick.png">
+						<img data-src="assets/tick.png">
 					</div>
 				</section>
 			</section>
@@ -71,7 +70,7 @@
 				<h4>Disadvantages of REST APIs </h4>
 				<section>
 					<div style="display: flex;justify-content: space-around;">
-						<img data-src="/assets/cross.png">
+						<img data-src="assets/cross.png">
 						<ul style="justify-content: center;
 							display: flex	;
 							flex-direction: column;">
@@ -93,7 +92,7 @@
 				</section>
 			</section>
 			<section style="font-size: 30px;">
-				<img width="700vw" data-src="/assets/graph.jpg">
+				<img width="700vw" data-src="assets/graph.jpg">
 				<ol>
 					<li class="fragment">With GraphQL, the request is longer but more explicit.</li>
 					<li class="fragment">The important information about the request is in the query, rather than in the URL, like
@@ -113,14 +112,14 @@
 						<li>Real-time data with subscriptions</li>
 						<li>Evolution</li>
 					</ul>
-					<img data-src=" /assets/tick.png">
+					<img data-src="assets/tick.png">
 				</section>
 			</section>
 			<section>
 				<h4>Disadvantages of GraphQL APIs</h4>
 				<section>
 					<div style="display: flex;justify-content: space-around;">
-						<img data-src="/assets/cross.png">
+						<img data-src="assets/cross.png">
 						<ul>
 							<li>Complexity</li>
 							<li>Caching</li>
@@ -132,52 +131,38 @@
 				</section>
 			</section>
 			<section>
-				<table>
-					<thead>
-						<tr>
-							<th>Aspect</th>
-							<th>REST</th>
-							<th>GraphQL</th>
-						</tr>
-					</thead>
-					<tbody style="font-size: 30px;">
-						<tr>
-							<td>Data fetching</td>
-							<td>Returns entire datasets from specific endpoints</td>
-							<td>Returns only the data requested from the client</td>
-						</tr>
-						<tr>
-							<td>Endpoints</td>
-							<td>Multiple endpoints for different resources</td>
-							<td>Single endpoint for all data requests</td>
-						</tr>
-						<tr>
-							<td>Caching</td>
-							<td>Leverages HTTP caching natively</td>
-							<td>More challenging, requires custom caching solutions</td>
-						</tr>
-						<tr>
-							<td>Real-time support</td>
-							<td>Limited, often requires WebSockets</td>
-							<td>Supports real-time updates with subscriptions</td>
-						</tr>
-						<tr>
-							<td>Complexity</td>
-							<td>Typically simpler to set up</td>
-							<td>Can be more complex to implement and manage</td>
-						</tr>
-					</tbody>
-				</table>
-			</section>
-			<section>
 				<div style="display: flex; justify-content: center; gap: 520px;">
 					<p>REST</p>
 					<p>GraphQL</p>
 				</div>
 				<div style="display: flex; justify-content: center; gap: 40px">
-					<img width="600vw" data-src="/assets/rest-diagram.jpg">
-					<img width="600vw" data-src="/assets/graphQL-diagram.jpg">
+					<img width="600vw" data-src="assets/rest-diagram.jpg">
+					<img width="600vw" data-src="assets/graphQL-diagram.jpg">
 				</div>
+			</section>
+			<section>
+				<h4>When to use REST</h4>
+				<ol>
+					<li class="fragment">Building a simple API</li>
+					<li class="fragment">Wide compatibility</li>
+					<li class="fragment">Lower setup complexity </li>
+					<div style="display: flex;justify-content: center;"> <img width="350vw" data-src="assets/use rest.jpg">
+					</div>
+				</ol>
+			</section>
+			<section>
+				<h4>When to use GraphQL</h4>
+				<ol>
+					<li class="fragment">Complex, data-intensive apps</li>
+					<li class="fragment">Real-time updates</li>
+					<li class="fragment">Dynamic frontends</li>
+					<li class="fragment">Reduced network calls</li>
+					<div style="display: flex;justify-content: center;"> <img width="350vw" data-src="assets/use graphql.jpg">
+					</div>
+				</ol>
+			</section>
+			<section>
+				<h2>Thank you</h2>
 			</section>
 		</div>
 	</div>
